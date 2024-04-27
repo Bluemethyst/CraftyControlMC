@@ -1,11 +1,11 @@
 package dev.bluemethyst.bots.kotbot
 
+import dev.bluemethyst.bots.kotbot.common.loadConfig
 import dev.kord.gateway.ALL
 import dev.kord.gateway.Intents
 import dev.kord.gateway.PrivilegedIntent
 import kotlinx.coroutines.flow.toList
 import me.jakejmattson.discordkt.dsl.bot
-import io.github.cdimascio.dotenv.dotenv
 import me.jakejmattson.discordkt.dsl.CommandException
 import me.jakejmattson.discordkt.dsl.ListenerException
 
@@ -13,9 +13,9 @@ val embedColor = java.awt.Color(0x8c34eb)
 
 @OptIn(PrivilegedIntent::class)
 fun main(args: Array<String>) {
-    val token = dotenv()
+    val config = loadConfig()
 
-    bot(token["TOKEN"]) {
+    bot(config.botConfig.token) {
         presence {
             watching("longgg jvm errors")
         }

@@ -1,0 +1,6 @@
+{
+    "botConfig": {
+        "token": "", //your bot token
+        "endpoint": "" //probably https://localhost:8443/api
+    }
+}

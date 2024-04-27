@@ -15,6 +15,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
     implementation("me.jakejmattson:DiscordKt:${project.property("discordkt_ver")}")
     implementation("io.github.cdimascio:dotenv-kotlin:${project.property("dotenv_kotlin_ver")}")
+    implementation("io.github.xn32:json5k:${project.property("json5k_ver")}")
 }
 
 tasks.test {
